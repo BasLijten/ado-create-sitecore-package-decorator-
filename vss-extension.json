@@ -2,7 +2,7 @@
     "manifestVersion": 1,
     "id": "sitecore-package-decorator",
     "name": "Decorator task to inspect generated Sitecore packages",
-    "version": "0.0.8",
+    "version": "0.0.10",
     "publisher": "BasLijten",
     "targets": [
         {

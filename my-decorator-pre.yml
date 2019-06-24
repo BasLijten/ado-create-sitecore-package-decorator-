@@ -1,3 +1,4 @@
+steps:
 - task: CmdLine@2
   displayName: 'Run my script (injected from decorator) - pre'
   inputs:
