@@ -1,0 +1,21 @@
+{
+    "id": "765bd81a-8ffd-4486-9a9d-cbf32ffefda3",
+    "name": "qa-on-sitecore-package",
+    "friendlyName": "Quality assurance on sitecore package",
+    "description": "Basic validations on package, such as latest patch level, security patches, configurations",
+    "helpMarkDown": "",
+    "category": "Build",    
+    "author": "Bas Lijten",
+    "version": {
+        "Major": 0,
+        "Minor": 1,
+        "Patch": 0
+    },
+    "instanceNameFormat": "QA",    
+    "execution": {
+        "PowerShell3": {
+            "target": "$(currentDirectory)\\run-azureDevOpsTask.ps1",
+            "workingDirectory": "$(System.DefaultWorkingDirectory)"
+        }
+    }
+}
