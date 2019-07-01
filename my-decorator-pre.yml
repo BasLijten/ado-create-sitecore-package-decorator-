@@ -1,11 +1,11 @@
 steps:
-- ${{ if and(eq(resources.repositories['self'].ref, resources.repositories['self'].defaultBranch), containsValue(job.steps.*.task.id, 'a56dfe91-00fd-41d0-9a38-a4a71ffde7ef')) }}:
-    - task: CmdLine@2
-        displayName: 'Run my script (injected from decorator) - pre'
-        inputs:
-        script: |
-            echo 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
-            echo
-            echo post decorator action
-            echo 
-            echo 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+- task: CmdLine@2
+  displayName: 'Decorator action'
+  inputs:
+    script: |
+      echo 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+      echo
+      echo  this action always gets inserted
+      echo 
+      echo 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+    

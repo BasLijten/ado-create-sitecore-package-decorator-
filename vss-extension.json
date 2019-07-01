@@ -2,7 +2,7 @@
     "manifestVersion": 1,
     "id": "sitecore-package-decorator",
     "name": "Decorator task to inspect generated Sitecore packages",
-    "version": "0.0.10",
+    "version": "0.0.20",
     "publisher": "BasLijten",
     "targets": [
         {
@@ -23,6 +23,9 @@
             "path": "my-decorator-post.yml",
             "addressable": true,
             "contentType": "text/plain"
+        },
+        {
+            "path": "DecoratorTask"            
         }
     ],
     "contributions": [
@@ -44,6 +47,16 @@
             ],
             "properties": {
                 "template": "my-decorator-post.yml"
+            }
+        },
+        {
+            "id": "qa-sitecore-wdp",
+            "type": "ms.vss-distributed-task.task",
+            "targets": [
+                "ms.vss-distributed-task.tasks"
+            ],
+            "properties": {
+                "name": "DecoratorTask"
             }
         }
     ]

@@ -1,10 +1,13 @@
 steps:
-- task: CmdLine@2
-  displayName: 'Run my script (injected from decorator) - post'
-  inputs:
-    script: |
-     echo 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
-     echo
-     echo post decorator action
-     echo 
-     echo 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+- ${{ if containsValue(job.steps.*.task.id, 'a56dfe91-00fd-41d0-9a38-a4a71ffde7ef') }}:
+  - task: CmdLine@2
+    displayName: 'Run my script (injected from decorator) - post'
+    inputs:
+      script: |
+       echo 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+       echo
+       echo post decorator action
+       echo 
+       echo 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+  - task: BasLijten.sitecore-package-decorator.qa-sitecore-wdp.qa-on-sitecore-package@0
+    displayName: 'QA on sitecore package'  
